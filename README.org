@@ -1,6 +1,6 @@
-* Figwheel autobuilds no longer works on clojure 1.10.0-beta1
+* Figwheel autobuilds no longer works on clojure 1.10.0-alpha9
 
-Updating from 1.10.0-alpha8 to 1.10.0-beta1 breaks figwheels
+Updating from 1.10.0-alpha8 to 1.10.0-alpha9 breaks figwheels
 autorebuild. To test clone this repository and run with =clj
 -A:build-dev= change the source file and see how a rebuild is
 performed. Stop the repl and instead use the comman =clj
