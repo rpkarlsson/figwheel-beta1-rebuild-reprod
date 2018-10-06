@@ -3,4 +3,5 @@
         org.clojure/clojure {:mvn/version "1.10.0-alpha7"}}
  :aliases {:build-dev {:main-opts ["-m" "figwheel.main" "-b" "dev" "-r"]}
            :alpha8 {:override-deps {org.clojure/clojure {:mvn/version "1.10.0-alpha8"}}}
+           :alpha9 {:override-deps {org.clojure/clojure {:mvn/version "1.10.0-alpha9"}}}
            :beta1 {:override-deps {org.clojure/clojure {:mvn/version "1.10.0-beta1"}}}}}
