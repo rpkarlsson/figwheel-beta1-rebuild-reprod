@@ -2,4 +2,5 @@
  :deps {com.bhauman/figwheel-main {:mvn/version "0.1.9"}
         org.clojure/clojure {:mvn/version "1.10.0-alpha7"}}
  :aliases {:build-dev {:main-opts ["-m" "figwheel.main" "-b" "dev" "-r"]}
-          :beta1 {:override-deps {org.clojure/clojure {:mvn/version "1.10.0-beta1"}}}}}
+           :alpha8 {:override-deps {org.clojure/clojure {:mvn/version "1.10.0-alpha8"}}}
+           :beta1 {:override-deps {org.clojure/clojure {:mvn/version "1.10.0-beta1"}}}}}

@@ -1,6 +1,6 @@
 * Figwheel autobuilds no longer works on clojure 1.10.0-beta1
 
-Updating from 1.10.0-alpha7 to 1.10.0-beta1 breaks figwheels
+Updating from 1.10.0-alpha8 to 1.10.0-beta1 breaks figwheels
 autorebuild. To test clone this repository and run with =clj
 -A:build-dev= change the source file and see how a rebuild is
 performed. Stop the repl and instead use the comman =clj
@@ -42,6 +42,42 @@ performed. Stop the repl and instead use the comman =clj
  #+END_SRC
 
  Changing the contents of a source file triggers a rebuild.
+
+** Running on 1.10-0alpha8
+#+BEGIN_SRC shell
+figbug master clj -A:build-dev:alpha8
+[Figwheel] Compiling build dev to "target/public/cljs-out/dev-main.js"
+[Figwheel] Successfully compiled build dev to "target/public/cljs-out/dev-main.js" in 1.467 seconds.
+[Figwheel] Watching paths: ("src") to compile build - dev
+[Figwheel] Starting Server at http://localhost:9500
+[Figwheel] Starting REPL
+Prompt will show when REPL connects to evaluation environment (i.e. a REPL hosting webpage)
+Figwheel Main Controls:
+          (figwheel.main/stop-builds id ...)  ;; stops Figwheel autobuilder for ids
+          (figwheel.main/start-builds id ...) ;; starts autobuilder focused on ids
+          (figwheel.main/reset)               ;; stops, cleans, reloads config, and starts autobuilder
+          (figwheel.main/build-once id ...)   ;; builds source one time
+          (figwheel.main/clean id ...)        ;; deletes compiled cljs target files
+          (figwheel.main/status)              ;; displays current state of system
+Figwheel REPL Controls:
+          (figwheel.repl/conns)               ;; displays the current connections
+          (figwheel.repl/focus session-name)  ;; choose which session name to focus on
+In the cljs.user ns, controls can be called without ns ie. (conns) instead of (figwheel.repl/conns)
+    Docs: (doc function-name-here)
+    Exit: :cljs/quit
+ Results: Stored in vars *1, *2, *3, *e holds last exception object
+2018-10-06 20:16:27.057:INFO::main: Logging initialized @11030ms
+Opening URL http://localhost:9500
+ClojureScript 1.10.339
+cljs.user=> [Figwheel] Compiling build dev to "target/public/cljs-out/dev-main.js"
+[Figwheel] Successfully compiled build dev to "target/public/cljs-out/dev-main.js" in 0.539 seconds.
+bar
+[Figwheel] Compiling build dev to "target/public/cljs-out/dev-main.js"
+[Figwheel] Successfully compiled build dev to "target/public/cljs-out/dev-main.js" in 0.377 seconds.
+foo
+#+END_SRC
+
+Autobuild works.
 
 ** Running on 1.10.0-beta1
 
