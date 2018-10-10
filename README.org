@@ -5,6 +5,7 @@ autorebuild. To test clone this repository and run with =clj
 -A:build-dev= change the source file and see how a rebuild is
 performed. Stop the repl and instead use the comman =clj
 -A:build-dev:beta1= changing the source files no longer triggers a rebuild.
+The issue is fixed in =clj -A:build-dev:beta2=
 
 
 ** Running on 1.10.0-alpha7
